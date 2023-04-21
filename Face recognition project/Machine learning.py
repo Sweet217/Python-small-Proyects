@@ -3,7 +3,7 @@ import os
 import numpy as np
 
 #Creation of the list of people that the database have
-dataPath = '/home/gabriel/Desktop/Proyectos Python/Face recognition project/Database'
+dataPath = 'C:\\Users\\soyel\\Desktop\\Proyectos propios\\Hotel-database-Manipulation\\Face recognition project\\Database'
 peopleList = os.listdir(dataPath)
 print('People list', peopleList)
 
@@ -35,11 +35,14 @@ for nameDir in peopleList:
 #print('Number of labels', np.count_nonzero(np.array(labels)==1))
 
 #Machile learning method selected : LBPHF or Fisher
-faceRecognizer = cv2.face.LBPHFaceRecognizer_create()
+faceRecognizer = cv2.face_LBPHFaceRecognizer.create()
+
 print('___Training in process___')
 faceRecognizer.train(facesData, np.array(labels))
 
-pathToSave = '/home/gabriel/Desktop/Proyectos Python/Face recognition project/Xml Files/FaceFrontalData.xml'
+pathToSave = 'C:/Users/soyel/Desktop/Proyectos propios/Hotel-database-Manipulation/Face recognition project/Xml Files/training.xml'
+
+
 faceRecognizer.write(pathToSave)
 print('Model Saved')
 

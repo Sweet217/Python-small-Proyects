@@ -4,7 +4,7 @@ import imutils
 
 #Automatization of directories
 personName = input('Dime tu nombre: ')
-dataPath = '/home/gabriel/Desktop/Proyectos Python/Face recognition project/Database'
+dataPath = 'C:\\Users\\soyel\\Desktop\\Proyectos propios\\Hotel-database-Manipulation\\Face recognition project\\Database'
 personPath = dataPath + '/' + personName
 
 if not os.path.exists(personPath):

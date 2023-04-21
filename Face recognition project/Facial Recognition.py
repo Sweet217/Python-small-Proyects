@@ -1,13 +1,13 @@
 import cv2
 import os
 
-dataPath = '/home/gabriel/Desktop/Proyectos Python/Face recognition project/Database'
+dataPath = 'C:\\Users\\soyel\\Desktop\\Proyectos propios\\Hotel-database-Manipulation\\Face recognition project\\Database'
 imagePath = os.listdir(dataPath)
 print('imagePath= ', imagePath)
 
 faceRecognizer = cv2.face.LBPHFaceRecognizer_create()
 
-faceRecognizer.read('/home/gabriel/Desktop/Proyectos Python/Face recognition project/Xml Files/FaceFrontalData.xml')
+faceRecognizer.read('C:/Users/soyel/Desktop/Proyectos propios/Hotel-database-Manipulation/Face recognition project/Xml Files/training.xml')
 
 capture = cv2.VideoCapture(0)
 
