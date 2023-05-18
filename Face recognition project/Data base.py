@@ -5,7 +5,7 @@ import imutils
 #Automatization of directories
 personName = input('Dime tu nombre: ')
 dataPath = 'C:\\Users\\soyel\\Desktop\\Proyectos propios\\Hotel-database-Manipulation\\Face recognition project\\Database'
-personPath = dataPath + '/' + personName
+personPath = os.path.join(dataPath, personName)
 
 if not os.path.exists(personPath):
     print('Carpeta Creada: ', personPath)
