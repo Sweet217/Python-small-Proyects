@@ -4,7 +4,7 @@ openai.api_key = "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"
 
 
 while True:
-    question = input("\n type LEAVE to terminate the chat. \n Whats ur question? ")
+    question = input("\n type LEAVE to terminate the chat. \n Whats ur question?\n ")
     if question.lower() == "leave":
       print("If u have more questions let me know! =D ")
       break
