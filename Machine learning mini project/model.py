@@ -562,8 +562,67 @@ inputs = [
     'A: Cats are popular as companions and are valued for their companionship and affection.',
     'Text: Cats communicate through a combination of vocalizations, body language, and scent marking.',
     'Q: How do cats communicate?',
-    'A: Cats communicate through a combination of vocalizations, body language, and scent marking.'
-
+    'A: Cats communicate through a combination of vocalizations, body language, and scent marking.',
+    'Text: Gabriel is desperate because this model is not working',
+    'Q: Why is Gabriel desperate?',
+    'A: Because the model is not working',
+    'Text: Gabriel is beatiful because Marisol think so',
+    'Q: Why is Gabriel beatiful?',
+    'A: Because Marisol think so',
+    'Text: Gabriel is good',
+    'Q: Is gabriel Good?',
+    'A: Yes',
+    'Text: Gabriel is good',
+    'Q: Is Gabriel bad?',
+    'A: No, is good',
+    'Text: the Cat is good',
+    'Q: Is the Cat bad?',
+    'A: No, he is good',
+    'Text: the Dog is good',
+    'Q: Is the Dog Good?',
+    'A: Yes',
+    'Text: the Food is good',
+    'Q: Is the Food bad?',
+    'A: No, the food is good',
+    'Text: the Cat is good',
+    'Q: Is the Cat bad?',
+    'A: No, the cat is good',
+    'Text: Maria is good',
+    'Q: Is Maria bad?',
+    'A: No, Maria is good',
+    'Text: Maria is a good cooker',
+    'Q: Is Maria a good cooker?',
+    'A: Yes',
+    'Text: Tigers are bad companions',
+    'Q: Are Tigers bad companions?',
+    'A: Yes',
+    'Text: Maria is a good cooker',
+    'Q: Is Maria a bad cooker?',
+    'A: No she is a good cooker',
+    'Text: Tigers are bad companions',
+    'Q: Are Tigers good companions?',
+    'A: No they are bad companions',
+    'Text: Otters are good companions',
+    'Q: Are otters good companions?',
+    'A: Yes',
+    'Text: Capybaras are good companions',
+    'Q: Are Capybaras good companions?',
+    'A: Yes',
+    'Text: Capybaras are bad companions',
+    'Q: Are Capybaras bad companions?',
+    'A: Yes',
+    'Text: Ducks are good companions',
+    'Q: Are Ducks good companions?',
+    'A: Yes',
+    'Text: Dogs are good companions',
+    'Q: Are Dogs good companions?',
+    'A: Yes',
+    'Text: Animals are usually good',
+    'Q: Are Animals usually good?',
+    'A: Yes',
+    'Text: Gabriel loves Coyoli',
+    'Q: Gabriel loves Coyoli?',
+    'A: Yes',
 ]
 # Separate the inputs into T , Q AND A, text question awnser
 texts = []
@@ -609,11 +668,11 @@ model = keras.Model([input_text, input_question], output)
 
 # Compiling and training the model
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-model.fit([text_sequences, question_sequences], answer_sequences, epochs=100, verbose=2)
+model.fit([text_sequences, question_sequences], answer_sequences, epochs=300, verbose=2)
 
 # Testing the model
-test_text = 'The capital of gabriel is ubuyashiki'
-test_question = 'What is the capital of gabriel?'
+test_text = ''
+test_question = ''
 test_text_sequence = tokenizer.texts_to_sequences([test_text])
 test_question_sequence = tokenizer.texts_to_sequences([test_question])
 test_text_sequence = pad_sequences(test_text_sequence, maxlen=max_length, padding='post')
