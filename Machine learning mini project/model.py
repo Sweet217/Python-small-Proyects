@@ -671,8 +671,8 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=
 model.fit([text_sequences, question_sequences], answer_sequences, epochs=300, verbose=2)
 
 # Testing the model
-test_text = ''
-test_question = ''
+test_text = 'Cats are wonderfull'
+test_question = 'Are cats wonderfull?'
 test_text_sequence = tokenizer.texts_to_sequences([test_text])
 test_question_sequence = tokenizer.texts_to_sequences([test_question])
 test_text_sequence = pad_sequences(test_text_sequence, maxlen=max_length, padding='post')
